@@ -16,17 +16,9 @@ class Customer << Entity >> {
     + email : String
     + password : String
     + status : Number
-    + AddMarket()
-    + UpdateMarket()
-    + DeleteMarket()
-    + AddCategory()
-    + UpdateCategory()
-    + DeleteCategory()
-    + AddProducts()
-    + AddProductsImage()
-    + UpdateProductsImage()
-    + UpdateProducts()
-    + DeleteProducts()
+    + Add()
+    + Update()
+    + Delete()
     + PlaceOrder()
 }
 
