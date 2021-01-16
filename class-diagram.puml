@@ -1,0 +1,73 @@
+@startuml "Class Diagram"
+
+class Admin << Entity >> {
+    + id : Number
+    + name : String
+    + password : String
+    + email : String
+    + level : Number
+    + ViewCustomers()
+    + ViewOrders()
+}
+
+class Customer << Entity >> {
+    + id : Number
+    + name : String
+    + email : String
+    + password : String
+    + status : Number
+}
+
+class Market << Entity >> {
+    + id : Number
+    + name : String
+    + locations: [Location]
+    + AddMarket()
+    + UpdateMarket()
+    + DeleteMarket()
+}
+
+class Category << Entity >> {
+    + id : Number
+    + name : String
+    + AddCategory()
+    + UpdateCategory()
+    + DeleteCategory()
+}
+
+class Products << Entity >> {
+    + id : Number
+    + catid : Number
+    + name : String
+    + brand : String
+    + photo : String
+    + notes : String
+    + AddProducts()
+    + AddProductsImage()
+    + UpdateProducts()
+    + DeleteProducts()
+}
+
+class Basket << Entity >> {
+    + id : Number
+    + customerid : Number
+    + products : products[]
+    + products_piece : products_piece[]
+    + notes : String
+    + status : Number
+}
+
+class Order << Entity >> { 
+    + id : Number
+    + basketid : Number
+    + date : Date
+    + PlaceOrder()
+}
+Customer -left-o Admin
+Category *-up- Market
+Products *-up- Category
+Customer --> Basket
+Basket --> Order
+Basket -left-> Market
+
+@enduml
