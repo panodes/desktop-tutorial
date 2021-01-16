@@ -16,23 +16,29 @@ class Customer << Entity >> {
     + email : String
     + password : String
     + status : Number
+    + AddMarket()
+    + UpdateMarket()
+    + DeleteMarket()
+    + AddCategory()
+    + UpdateCategory()
+    + DeleteCategory()
+    + AddProducts()
+    + AddProductsImage()
+    + UpdateProductsImage()
+    + UpdateProducts()
+    + DeleteProducts()
+    + PlaceOrder()
 }
 
 class Market << Entity >> {
     + id : Number
     + name : String
     + locations: [Location]
-    + AddMarket()
-    + UpdateMarket()
-    + DeleteMarket()
 }
 
 class Category << Entity >> {
     + id : Number
     + name : String
-    + AddCategory()
-    + UpdateCategory()
-    + DeleteCategory()
 }
 
 class Products << Entity >> {
@@ -42,11 +48,6 @@ class Products << Entity >> {
     + brand : String
     + photo : String
     + notes : String
-    + AddProducts()
-    + AddProductsImage()
-    + UpdateProductsImage()
-    + UpdateProducts()
-    + DeleteProducts()
 }
 
 class Basket << Entity >> {
@@ -62,7 +63,6 @@ class Order << Entity >> {
     + id : Number
     + basketid : Number
     + date : Date
-    + PlaceOrder()
 }
 Customer -left-o Admin
 Category *-up- Market
