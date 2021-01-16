@@ -1,3 +1,3 @@
 # M-einkaufsApp
 
-Kullanıcıların kendi alışveriş listelerini oluşturabileceği, Marketlerinş, reyonlarını(kategorilerini), ürünlerini ve anlık olarak uygulamaya ekleyip daha sonra bunu kontrol edebileceği bir uygulama.
+Kullanıcıların kendi alışveriş listelerini oluşturabileceği, marketleri, reyonlarını(kategorilerini), ürünlerini ve alışveriş sepetlerini oluşturup markete gidildiğinde herhangi bir ürünün unutulmamasını sağlayacak bir uygulama. 
