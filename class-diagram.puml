@@ -44,6 +44,7 @@ class Products << Entity >> {
     + notes : String
     + AddProducts()
     + AddProductsImage()
+    + UpdateProductsImage()
     + UpdateProducts()
     + DeleteProducts()
 }
