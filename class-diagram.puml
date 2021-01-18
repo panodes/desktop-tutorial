@@ -1,7 +1,6 @@
 @startuml "Class Diagram"
 
 class Admin << Entity >> {
-    + id : Number
     + name : String
     + password : String
     + email : String
@@ -11,7 +10,6 @@ class Admin << Entity >> {
 }
 
 class Customer << Entity >> {
-    + id : Number
     + name : String
     + email : String
     + password : String
@@ -23,19 +21,15 @@ class Customer << Entity >> {
 }
 
 class Market << Entity >> {
-    + id : Number
     + name : String
     + locations: [Location]
 }
 
 class Category << Entity >> {
-    + id : Number
     + name : String
 }
 
 class Products << Entity >> {
-    + id : Number
-    + catid : Number
     + name : String
     + brand : String
     + photo : String
@@ -43,8 +37,6 @@ class Products << Entity >> {
 }
 
 class Basket << Entity >> {
-    + id : Number
-    + customerid : Number
     + products : products[]
     + products_piece : products_piece[]
     + notes : String
@@ -52,7 +44,6 @@ class Basket << Entity >> {
 }
 
 class Order << Entity >> { 
-    + id : Number
     + basketid : Number
     + date : Date
 }
